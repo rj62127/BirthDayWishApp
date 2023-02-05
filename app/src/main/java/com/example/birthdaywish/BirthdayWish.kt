@@ -6,6 +6,11 @@ import android.os.Bundle
 
 
 class BirthdayWish : AppCompatActivity() {
+
+
+    companion object {
+        const val NAME_EXTRA = "name_extra"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -14,7 +19,10 @@ class BirthdayWish : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_birthday_wish)
 
-        val name = intent.getStringExtra("name")
+        val name = intent.getStringExtra(NAME_EXTRA)
+
+
+        birthdaywish.text= "Happy Birthday\n $name!"
 
     }
 }
